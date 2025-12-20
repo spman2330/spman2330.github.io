@@ -3,12 +3,30 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
-  deploy:
-    uses: importantimport/.github/.github/workflows/pnpm-gh-pages.yml@main
+  build:
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    with:
-      publish_dir: build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install
+      - run: pnpm svelte-kit sync
+      - run: pnpm run build
+
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build
