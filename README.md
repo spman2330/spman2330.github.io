@@ -6,5 +6,5 @@ Repo này là pet project đầu tiên của tôi. Tôi muốn thật sự làm 
 Pet project này có mục đích nhằm tạo ra 1 site cá nhân có mục đích:
 - Tạo 1 site chứa các thông tin about me, cv, portfolio, arts, quotes, ...
 - Học cách hoạt động của github page, github action, cloudflare để deploy trang web
-- Project cũng sử dụng template có sẵn của [importantimport/urara](https://github.com/importantimport/urara). Tôi muốn học cách đọc code từ 1 repo lạ và hiểu nó, chạy nó và chỉnh sửa nó.
+- Project cũng sử dụng template có sẵn của [importantimport/urara](https://github.com/importantimport/urara). Tôi muốn học cách đọc code từ 1 repo lạ để hiểu nó, chạy nó và chỉnh sửa nó.
 - Ngoài ra tôi muốn tìm hiểu chút về khái niệm SEO của blog.
